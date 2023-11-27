@@ -1,0 +1,84 @@
+TO AI-BASED Animated Video You need to try this Bunch of code which is below  
+
+
+Step 1: Sing Up To https://studio.d-id.com/ 
+
+Step 2: Get API Key from the settings 
+
+Step 3: Create a new collection in the Postman API platform or somewhere
+
+Step 4: Configure the collection for Authorization with API (KEY: Authorization, Value: (API Key)) 
+
+
+EX1: Api Call for craeting Video:
+
+URL (POST Call): https://api.d-id.com/talks
+
+( Body IN JSON form):
+{
+"script":{
+"type":"text",
+"input":"There was no single Indian King Dom before 1600. There were many small kingdoms and principalities that varied in terms of size, power, and political organization.",
+"provider":{
+"type":"microsoft",
+"voice_id":"en-US-BrianNeural",
+"voice_config":{
+"style":"cheerful"
+}
+}
+},
+"source_url":"https://create-images-results.d-id.com/google-oauth2%7C118190067721942097847/drm_7FumiPSQZgyE-lkQRkXVy/image.png",
+"webhook":"https://host.domain.tld/to/webhook"
+}
+
+
+
+
+EX2: 
+URL (POST Call): https://api.d-id.com/clips
+{
+    "script":{
+    "type":"text",
+    "input":"There was no single Indian King Dom before 1600. There were many small kingdoms and principalities that varied in terms of size, power, and political organization.",
+    "provider":{
+        "type":"microsoft",
+        "voice_id":"en-US-BrianNeural",
+        "voice_config":{
+            "style":"cheerful"
+        }
+    }
+    },
+                "presenter_id": "amy-Aq6OmGZnMt",
+            "driver_id": "Vcq0R4a8F0",
+    "webhook":"https://host.domain.tld/to/webhook",
+    "background":{
+        "colour":"#1111"
+    }
+}
+
+
+
+
+
+You may get RESPONSE as: 
+{
+    "id": "xxxxxxxxxxxxxxxxxx",
+    "created_at": "xxxxxxxxxxxxxxxxxx",
+    "created_by": "xxxxxxxxxxxxxxxxxxxxx",
+    "status": "created",
+    "object": "talk"
+}
+
+
+
+2. To get the video that you have created above
+
+URL ( GET Call): https://api.d-id.com/talks/xxxxxxxxxxxxx(ID which you get as a response from post-call while creating video)
+
+You may get RESPONSE as: { large object } but just take the RESULTANT URL and paste it into the browser then your AI Based video will get download
+
+
+***** We can make a lot of changes to our content based on our requirements through changes in JSON BODY in API calls from Postman
+
+
+
